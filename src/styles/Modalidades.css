@@ -1,0 +1,59 @@
+.modalidades {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.modalidades h2 {
+    text-align: center;
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.modalidades-descricao {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.modalidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.modalidade-card {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color);
+}
+
+.modalidade-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(88, 126, 216, 0.2);
+}
+
+.modalidade-card h3 {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modalidade-card p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.modalidade-card .destaque {
+    display: block;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
