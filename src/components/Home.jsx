@@ -1,9 +1,8 @@
 import '../styles/Home.css';
 import { FaWhatsapp } from 'react-icons/fa';
 
-function Home() {
-    const handleWhatsAppClick = () => {
-        const phoneNumber = "5521970267180"; // Número do WhatsApp da academia
+function Home() {    const handleWhatsAppClick = () => {
+        const phoneNumber = "5521964721090";
         const message = "Olá! Gostaria de saber mais sobre a academia.";
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');

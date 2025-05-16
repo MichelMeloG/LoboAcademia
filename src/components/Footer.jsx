@@ -1,7 +1,13 @@
 import '../styles/Footer.css';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
-function Footer() {
+function Footer() {    const handleWhatsAppClick = () => {
+        const phoneNumber = "5521964721090";
+        const message = "Olá! Gostaria de saber mais sobre a academia.";
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    };
+
     return (
         <footer className="footer">
             <div className="container">
@@ -17,6 +23,9 @@ function Footer() {
                             <a href="https://www.instagram.com/academialobodeeden/" className="social-icon">
                                 <FaInstagram />
                             </a>
+                            <button onClick={handleWhatsAppClick} className="social-icon whatsapp-button">
+                                <FaWhatsapp />
+                            </button>
                         </div>
                     </div>
                 </div>

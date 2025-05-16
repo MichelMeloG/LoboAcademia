@@ -45,7 +45,8 @@
     gap: 1rem;
 }
 
-.social-links a {
+.social-links a,
+.social-links button {
     padding: 0.5rem;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
@@ -56,9 +57,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
+    cursor: pointer;
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.social-links button:hover {
     background-color: var(--primary-color);
     color: var(--light-color);
 }

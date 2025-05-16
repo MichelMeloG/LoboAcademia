@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .home {
-    margin-top: -80px; /* Compensa o padding-top do main para a seção hero */
-    padding-top: 0; /* Remove o padding apenas da seção home */
+    margin-top: -80px;
+    padding-top: 0;
 }
 
 .hero {
-    height: 100vh;    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    height: 100vh;    
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('/src/assets/background.jpg');
     background-size: cover;
     background-position: center;
@@ -29,7 +30,6 @@
 
 .hero h2 {
     font-size: 3rem;
-    
 }
 
 .hero h3 {
@@ -39,9 +39,8 @@
 }
 
 .hero p {
-    
     font-size: 1.2rem;
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .cta-button {
@@ -63,7 +62,7 @@
 
 .cta-button svg {
     font-size: 1.2rem;
-    margin-bottom: 1px; /* Ajuste fino para centralização vertical */
+    margin-bottom: 1px;
 }
 
 .cta-button:hover {
