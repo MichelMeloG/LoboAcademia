@@ -17,7 +17,7 @@ const ImageCarousel = () => {
         centerMode: true,
         centerPadding: '0',
         focusOnSelect: true,
-        cssEase: "cubic-bezier(0.87, 0.03, 0.41, 0.9)",responsive: [
+        cssEase: "cubic-bezier(0.87, 0.03, 0.41, 0.9)",        responsive: [
             {
                 breakpoint: 1024,
                 settings: {
@@ -27,11 +27,21 @@ const ImageCarousel = () => {
                 }
             },
             {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                    centerPadding: '0',
+                    dots: true
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
-                    centerMode: true,
-                    centerPadding: '0'
+                    slidesToShow: 1,
+                    centerMode: false,
+                    centerPadding: '0',
+                    dots: true
                 }
             },
             {
