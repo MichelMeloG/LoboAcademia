@@ -1,7 +1,19 @@
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/Header.css';
 import logo from '../assets/logo.png';
 
 function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <header className="header">
             <div className="logo">
@@ -9,11 +21,14 @@ function Header() {
                     <img src={logo} alt="Logo Lobo Academia" />
                 </a>
             </div>
-            <nav className="nav">
+            <button className="menu-button" onClick={toggleMenu}>
+                {isMenuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+            <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#planos">Planos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#home" onClick={closeMenu}>Home</a></li>
+                    <li><a href="#planos" onClick={closeMenu}>Planos</a></li>
+                    <li><a href="#contato" onClick={closeMenu}>Contato</a></li>
                 </ul>
             </nav>
         </header>

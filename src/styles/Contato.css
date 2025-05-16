@@ -14,12 +14,15 @@
     display: flex;
     gap: 2rem;
     padding: 0 2rem;
-    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contato-info-section {
     flex: 1;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contato-map-section {
@@ -89,12 +92,65 @@
 }
 
 @media (max-width: 768px) {
+    .contato {
+        padding: 3rem 0;
+    }
+
+    .contato h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
     .contato-flex-container {
         flex-direction: column;
+        padding: 0 1.5rem;
     }
     
     .contato-info-section,
     .contato-map-section {
         width: 100%;
+    }
+
+    .info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contato {
+        padding: 2rem 0;
+    }
+
+    .contato h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contato-flex-container {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+
+    .info-item {
+        margin-bottom: 1rem;
+    }
+
+    .info-item strong {
+        font-size: 1rem;
+    }
+
+    .info-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 770px) {
+    .contato-flex-container {
+        align-items: center;
+    }
+    
+    .info {
+        padding: 2rem 0;
     }
 }

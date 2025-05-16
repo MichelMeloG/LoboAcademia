@@ -14,6 +14,8 @@
     display: flex;
     justify-content: center;
     padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .plano-card {
@@ -91,4 +93,68 @@
 
 .matricula-btn:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .planos {
+        padding: 3rem 0;
+    }
+
+    .planos h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .plano-container {
+        padding: 0 1.5rem;
+    }
+
+    .plano-card {
+        padding: 1.5rem;
+    }
+
+    .preco .valor {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .planos {
+        padding: 2rem 0;
+    }
+
+    .planos h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .plano-container {
+        padding: 0 1rem;
+    }
+
+    .plano-card {
+        padding: 1.2rem;
+    }
+
+    .plano-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .preco .valor {
+        font-size: 2rem;
+    }
+
+    .preco .periodo {
+        font-size: 1rem;
+    }
+
+    .plano-card li {
+        font-size: 1rem;
+        padding: 0.6rem 0;
+    }
+
+    .matricula-btn {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+    }
 }

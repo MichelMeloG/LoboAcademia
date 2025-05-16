@@ -8,6 +8,7 @@
 .carousel-container .slick-slider {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .carousel-container h2 {
@@ -43,6 +44,8 @@
 
 .slick-prev, .slick-next {
     z-index: 1;
+    width: 40px;
+    height: 40px;
 }
 
 .slick-prev {
@@ -51,4 +54,53 @@
 
 .slick-next {
     right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 2rem 0;
+        padding-bottom: 4rem;
+    }
+
+    .carousel-container h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .carousel-slide img {
+        height: 300px;
+    }
+
+    .slick-prev, .slick-next {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        padding: 1.5rem 0;
+        padding-bottom: 3.5rem;
+    }
+
+    .carousel-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .carousel-slide {
+        padding: 0 5px;
+    }
+
+    .carousel-slide img {
+        height: 250px;
+    }
+
+    .slick-prev {
+        left: 5px;
+    }
+
+    .slick-next {
+        right: 5px;
+    }
 }
