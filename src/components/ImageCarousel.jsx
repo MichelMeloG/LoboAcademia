@@ -62,7 +62,7 @@ const ImageCarousel = () => {
         'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80',
         'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80'
     ];    return (
-        <div className={`carousel-container ${isInView ? 'animate-fadeIn' : ''} initially-hidden`} ref={carouselRef}>
+        <div id="instalacoes" className={`carousel-container ${isInView ? 'animate-fadeIn' : ''} initially-hidden`} ref={carouselRef}>
             <h2 className={`${isInView ? 'animate-fadeIn delay-200' : ''} initially-hidden`}>Instalações</h2>
             <div className={`${isInView ? 'animate-fadeIn delay-300' : ''} initially-hidden`}>
                 <Slider {...settings}>

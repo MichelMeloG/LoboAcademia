@@ -27,8 +27,10 @@ function Header() {
             <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
                 <ul>
                     <li><a href="#home" onClick={closeMenu}>Home</a></li>
+                    <li><a href="#modalidades" onClick={closeMenu}>Qualidades</a></li>
+                    <li><a href="#instalacoes" onClick={closeMenu}>Instalações</a></li>
                     <li><a href="#planos" onClick={closeMenu}>Planos</a></li>
-                    <li><a href="#contato" onClick={closeMenu}>Contato</a></li>
+                    <li><a href="#contato" onClick={closeMenu}>Informações</a></li>
                 </ul>
             </nav>
         </header>
