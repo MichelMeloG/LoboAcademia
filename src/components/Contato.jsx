@@ -1,48 +1,38 @@
 import '../styles/Contato.css';
+import GoogleMap from './GoogleMap';
+
 
 function Contato() {
     return (
         <section id="contato" className="contato">
             <div className="container">
-                <h2>Entre em Contato</h2>
-                <div className="contato-container">
-                    <div className="info">
-                        <h3>Informações</h3>
-                        <div className="info-item">
-                            <strong>Endereço:</strong>
-                            <p>Av. Principal, 1000 - Centro</p>
-                            <p>São Paulo - SP</p>
-                        </div>
-                        <div className="info-item">
-                            <strong>Telefone:</strong>
-                            <p>(11) 99999-9999</p>
-                        </div>
-                        <div className="info-item">
-                            <strong>Email:</strong>
-                            <p>contato@loboacademia.com</p>
-                        </div>
-                        <div className="info-item">
-                            <strong>Horário de Funcionamento:</strong>
-                            <p>Segunda a Sexta: 6h às 23h</p>
-                            <p>Sábados: 8h às 18h</p>
-                            <p>Domingos: 8h às 14h</p>
+                <h2>Informações</h2>
+                <div className="contato-flex-container">
+                    <div className="contato-info-section">
+                        <div className="info">
+                            <div className="info-item">
+                                <strong>Endereço:</strong>
+                                <p>R. Domingos Alves de Oliveira, 147 - Éden</p>
+                                <p>São João de Meriti - RJ</p>
+                            </div>
+                            <div className="info-item">
+                                <strong>Telefone:</strong>
+                                <p>(21) 96472-1090</p>
+                            </div>
+                            <div className="info-item">
+                                <strong>Email:</strong>
+                                <p>academialobodeeden@gmail.com</p>
+                            </div>
+                            <div className="info-item">
+                                <strong>Horário de Funcionamento:</strong>
+                                <p>Segunda a Sexta: 6h às 22h</p>
+                                <p>Sábados: 7h às 15h</p>                            
+                            </div>
                         </div>
                     </div>
-                    <form className="contato-form">
-                        <div className="form-group">
-                            <input type="text" placeholder="Nome" required />
-                        </div>
-                        <div className="form-group">
-                            <input type="email" placeholder="Email" required />
-                        </div>
-                        <div className="form-group">
-                            <input type="tel" placeholder="Telefone" />
-                        </div>
-                        <div className="form-group">
-                            <textarea placeholder="Mensagem" required rows="5"></textarea>
-                        </div>
-                        <button type="submit" className="submit-btn">Enviar Mensagem</button>
-                    </form>
+                    <div className="contato-map-section">
+                        <GoogleMap />
+                    </div>
                 </div>
             </div>
         </section>

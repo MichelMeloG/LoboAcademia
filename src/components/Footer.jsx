@@ -9,14 +9,7 @@ function Footer() {
                         <h4>Lobo Academia</h4>
                         <p>Transformando vidas através do fitness desde 2025.</p>
                     </div>
-                    <div className="footer-section">
-                        <h4>Links Rápidos</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#planos">Planos</a></li>
-                            <li><a href="#contato">Contato</a></li>
-                        </ul>
-                    </div>
+                    
                     <div className="footer-section">
                         <h4>Redes Sociais</h4>
                         <div className="social-links">

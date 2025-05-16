@@ -1,6 +1,6 @@
 .contato {
     padding: 4rem 0;
-    background-color: white;
+    background-color: #f5f5f5;
 }
 
 .contato h2 {
@@ -10,11 +10,21 @@
     margin-bottom: 3rem;
 }
 
-.contato-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 4rem;
+.contato-flex-container {
+    display: flex;
+    gap: 2rem;
     padding: 0 2rem;
+    align-items: flex-start;
+}
+
+.contato-info-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contato-map-section {
+    flex: 1;
+    min-width: 300px;
 }
 
 .info {
@@ -79,7 +89,12 @@
 }
 
 @media (max-width: 768px) {
-    .contato-container {
-        grid-template-columns: 1fr;
+    .contato-flex-container {
+        flex-direction: column;
+    }
+    
+    .contato-info-section,
+    .contato-map-section {
+        width: 100%;
     }
 }

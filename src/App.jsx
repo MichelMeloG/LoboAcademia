@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Home from './components/Home'
+import ImageCarousel from './components/ImageCarousel'
 import Modalidades from './components/Modalidades'
 import Planos from './components/Planos'
 import Contato from './components/Contato'
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Home />
         <Modalidades />
+        <ImageCarousel />
         <Planos />
         <Contato />
       </main>
