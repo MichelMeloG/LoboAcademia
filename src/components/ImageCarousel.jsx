@@ -6,18 +6,18 @@ import '../styles/ImageCarousel.css';
 import useInView from '../hooks/useInView';
 
 const ImageCarousel = () => {
-    const [carouselRef, isInView] = useInView();
-    const settings = {
+    const [carouselRef, isInView] = useInView();    const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 800,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         centerMode: true,
         centerPadding: '0',
-        focusOnSelect: true,        responsive: [
+        focusOnSelect: true,
+        cssEase: "cubic-bezier(0.87, 0.03, 0.41, 0.9)",responsive: [
             {
                 breakpoint: 1024,
                 settings: {
@@ -53,7 +53,7 @@ const ImageCarousel = () => {
         'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80'
     ];    return (
         <div className={`carousel-container ${isInView ? 'animate-fadeIn' : ''} initially-hidden`} ref={carouselRef}>
-            <h2 className={`${isInView ? 'animate-fadeIn delay-200' : ''} initially-hidden`}>Galeria de Imagens</h2>
+            <h2 className={`${isInView ? 'animate-fadeIn delay-200' : ''} initially-hidden`}>Instalações</h2>
             <div className={`${isInView ? 'animate-fadeIn delay-300' : ''} initially-hidden`}>
                 <Slider {...settings}>
                     {images.map((image, index) => (

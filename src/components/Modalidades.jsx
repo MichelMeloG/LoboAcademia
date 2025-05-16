@@ -24,13 +24,13 @@ function Modalidades() {
             descricao: "Área dedicada para atletas e praticantes avançados",
             bn: "Equipamentos específicos"
         }
-    ];
-
-    return (
+    ];    return (
         <section id="modalidades" className="modalidades" ref={sectionRef}>
             <div className="container">
-                <h2>Por que treinar conosco?</h2>
-                <p className="modalidades-descricao">
+                <h2 className={`${isInView ? 'animate-fadeIn' : ''} initially-hidden`}>
+                    Por que treinar conosco?
+                </h2>
+                <p className={`modalidades-descricao ${isInView ? 'animate-fadeIn delay-200' : ''} initially-hidden`}>
                     Academia especializada em musculação, com equipamentos modernos e profissionais altamente qualificados
                 </p>
                 <div className="modalidades-grid">

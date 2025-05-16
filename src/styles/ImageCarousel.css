@@ -21,7 +21,6 @@
 
 .carousel-slide {
     padding: 0 5px;
-    transition: transform 0.3s ease;
 }
 
 .carousel-slide img {
@@ -29,14 +28,14 @@
     height: 400px;
     object-fit: cover;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.87, 0.03, 0.41, 0.9);
 }
 
 /* Estilo para slides não ativos */
 .slick-slide {
     transform: scale(0.85);
     opacity: 0.7;
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.87, 0.03, 0.41, 0.9);
 }
 
 /* Estilo para o slide ativo */
@@ -49,13 +48,24 @@
 .slick-prev,
 .slick-next {
     z-index: 1;
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
+    position: absolute;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
 }
 
-.slick-prev:hover,
-.slick-next:hover {
-    opacity: 0.7;
+.slick-prev:before,
+.slick-next:before {
+    font-size: 30px;
+    color: white;
+    opacity: 1;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
 }
 
 .slick-prev {
