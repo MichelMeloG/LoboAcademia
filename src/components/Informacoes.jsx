@@ -1,13 +1,13 @@
 import '../styles/Contato.css';
 import GoogleMap from './GoogleMap';
-
+import useInView from '../hooks/useInView';
 
 function Contato() {
-    return (
-        <section id="contato" className="contato">
+    const [infoRef, isInView] = useInView();    return (
+        <section id="contato" className="contato" ref={infoRef}>
             <div className="container">
-                <h2>Informações</h2>
-                <div className="contato-flex-container">
+                <h2 className={`${isInView ? 'animate-fadeIn' : ''} initially-hidden`}>Informações</h2>
+                <div className={`contato-flex-container ${isInView ? 'animate-fadeIn delay-200' : ''} initially-hidden`}>
                     <div className="contato-info-section">
                         <div className="info">
                             <div className="info-item">

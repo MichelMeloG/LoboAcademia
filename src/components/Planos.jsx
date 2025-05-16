@@ -1,7 +1,11 @@
 import '../styles/Planos.css';
 import { FaWhatsapp } from 'react-icons/fa';
+import useInView from '../hooks/useInView';
 
-function Planos() {    const handleWhatsAppClick = () => {
+function Planos() {
+    const [planoRef, isInView] = useInView();
+    
+    const handleWhatsAppClick = () => {
         const phoneNumber = "5521964721090";
         const message = "Olá! Gostaria de me matricular na academia.";
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -12,25 +16,22 @@ function Planos() {    const handleWhatsAppClick = () => {
         "Sem taxa de adesão",
         "Musculação completa",
         "Primeira avaliação física grátis"
-    ];
-
-    return (
-        <section id="planos" className="planos">
+    ];    return (
+        <section id="planos" className="planos" ref={planoRef}>
             <div className="container">
-                <h2>Plano Único</h2>
-                <div className="plano-container">
-                    <div className="plano-card">
-                        <h3>Mensal</h3>
-                        <div className="preco">
+                <h2 className={`${isInView ? 'animate-fadeIn' : ''} initially-hidden`}>Plano Único</h2>
+                <div className={`plano-container ${isInView ? 'animate-fadeIn delay-200' : ''} initially-hidden`}><div className="plano-card animate-scaleIn initially-hidden">
+                        <h3 className="animate-fadeIn delay-200 initially-hidden">Mensal</h3>
+                        <div className="preco animate-fadeIn delay-300 initially-hidden">
                             <span className="valor">R$ 85,00</span>
                             <span className="periodo">/mês</span>
                         </div>
-                        <ul>
+                        <ul className="animate-fadeIn delay-400 initially-hidden">
                             {beneficios.map((beneficio, idx) => (
                                 <li key={idx}>{beneficio}</li>
                             ))}
                         </ul>
-                        <button className="matricula-btn" onClick={handleWhatsAppClick}>
+                        <button className="matricula-btn animate-pulse" onClick={handleWhatsAppClick}>
                             <FaWhatsapp /> Matricule-se Agora
                         </button>
                     </div>

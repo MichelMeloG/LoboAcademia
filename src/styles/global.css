@@ -1,3 +1,5 @@
+@import './animations.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -30,4 +32,24 @@ html, body {
     --light-color: #ffffff;
     --text-color: #333;
     --accent-color: #4668B3;
+}
+
+/* Transições suaves para elementos interativos */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover suave para links e botões */
+a:hover, button:hover {
+    transform: translateY(-2px);
+}
+
+/* Efeito de clique */
+a:active, button:active {
+    transform: translateY(1px);
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
 }

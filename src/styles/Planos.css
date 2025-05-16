@@ -81,7 +81,7 @@
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -93,6 +93,7 @@
 
 .matricula-btn:hover {
     transform: scale(1.05);
+    background-color: var(--accent-color);
 }
 
 @media (max-width: 768px) {

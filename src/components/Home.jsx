@@ -10,12 +10,11 @@ function Home() {    const handleWhatsAppClick = () => {
 
     return (
         <section id="home" className="home">
-            <div className="hero">
-                <div className='hero-content'>                    
-                    <h2>Academia Lobo de Éden</h2>
-                    <h3>Transforme seu corpo</h3>
-                    <p>Transforme sua vida</p>
-                    <button className="cta-button" onClick={handleWhatsAppClick}>
+            <div className="hero">                <div className='hero-content'>                    
+                    <h2 className="animate-fadeIn initially-hidden">Academia Lobo de Éden</h2>
+                    <h3 className="animate-fadeIn delay-200 initially-hidden">Transforme seu corpo</h3>
+                    <p className="animate-fadeIn delay-300 initially-hidden">Transforme sua vida</p>
+                    <button className="cta-button animate-scaleIn delay-400 initially-hidden" onClick={handleWhatsAppClick}>
                         <FaWhatsapp /> Começar Agora
                     </button>
                 </div>

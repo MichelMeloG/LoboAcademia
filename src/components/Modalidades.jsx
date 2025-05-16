@@ -1,6 +1,8 @@
 import '../styles/Modalidades.css';
+import useInView from '../hooks/useInView';
 
 function Modalidades() {
+    const [sectionRef, isInView] = useInView();
     const beneficios = [
         {
             titulo: "Treino Personalizado",
@@ -25,7 +27,7 @@ function Modalidades() {
     ];
 
     return (
-        <section id="modalidades" className="modalidades">
+        <section id="modalidades" className="modalidades" ref={sectionRef}>
             <div className="container">
                 <h2>Por que treinar conosco?</h2>
                 <p className="modalidades-descricao">
@@ -33,7 +35,10 @@ function Modalidades() {
                 </p>
                 <div className="modalidades-grid">
                     {beneficios.map((beneficio, index) => (
-                        <div key={index} className="modalidade-card">
+                        <div 
+                            key={index} 
+                            className={`modalidade-card ${isInView ? `animate-fadeIn delay-${(index + 1) * 100}` : ''} initially-hidden`}
+                        >
                             <h3>{beneficio.titulo}</h3>
                             <p>{beneficio.descricao}</p>
                             <span className="destaque">{beneficio.bn}</span>
