@@ -6,9 +6,8 @@
 }
 
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/src/assets/hero-bg.jpg');
+    height: 100vh;    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('/src/assets/background.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -17,6 +16,15 @@
     align-items: center;
     text-align: center;
     color: white;
+    padding: 0 20px; 
+    min-height: 600px; 
+}
+
+.hero > div {
+    max-width: 800px; 
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px; 
 }
 
 .hero h2 {
@@ -27,20 +35,39 @@
 .hero h3 {
     font-size: 2rem;
     color: var(--primary-color);
+    margin-bottom: 3px;
+}
+
+.hero p {
+    
+    font-size: 1.2rem;
+    margin-bottom: 15px
 }
 
 .cta-button {
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    margin-top: 30px;
+    margin: 0px auto 0;
     background-color: var(--primary-color);
     border-radius: 5px;
     color: var(--light-color);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    line-height: 1;
+}
+
+.cta-button svg {
+    font-size: 1.2rem;
+    margin-bottom: 1px; /* Ajuste fino para centralização vertical */
 }
 
 .cta-button:hover {
     transform: scale(1.05);
+    background-color: var(--accent-color);
 }
 

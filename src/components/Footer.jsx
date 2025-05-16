@@ -1,4 +1,5 @@
 import '../styles/Footer.css';
+import { FaInstagram } from 'react-icons/fa';
 
 function Footer() {
     return (
@@ -13,9 +14,9 @@ function Footer() {
                     <div className="footer-section">
                         <h4>Redes Sociais</h4>
                         <div className="social-links">
-                            <a href="#">Instagram</a>
-                            <a href="#">Facebook</a>
-                            <a href="#">YouTube</a>
+                            <a href="https://www.instagram.com/academialobodeeden/" className="social-icon">
+                                <FaInstagram />
+                            </a>
                         </div>
                     </div>
                 </div>
