@@ -65,17 +65,14 @@
 .slick-prev:hover:before,
 .slick-next:hover:before {
     color: rgba(255, 255, 255, 0.75);
-    opacity: 1;
 }
 
 .slick-prev {
     left: 45px;
-    right: auto;
 }
 
 .slick-next {
     right: 45px;
-    left: auto;
 }
 
 .slick-dots {
@@ -115,12 +112,34 @@
 
     .carousel-slide img {
         height: 300px;
+        opacity: 1 !important;
+        filter: none !important;
+    }
+
+    /* Remove efeitos de escala e opacidade para tablets */
+    .slick-slide, 
+    .slick-slide img,
+    .slick-current, 
+    .slick-active,
+    .slick-center {
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+        filter: none !important;
     }
 
     .slick-prev,
     .slick-next {
-        width: 35px;
-        height: 35px;
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .slick-prev {
+        left: 20px;
+    }
+
+    .slick-next {
+        right: 20px;
     }
 }
 
@@ -141,43 +160,41 @@
 
     .carousel-slide img {
         height: 250px;
+        opacity: 1 !important;
+        filter: none !important;
     }
 
- 
-
-    /* Reset todos os efeitos de scale e opacity para tela pequena */
-    .slick-slide {
-        transform: scale(1) !important;
+    /* Remove efeitos de escala e opacidade apenas em mobile */
+    .slick-slide, 
+    .slick-slide img,
+    .slick-current, 
+    .slick-active,
+    .slick-center {
+        transform: none !important;
         opacity: 1 !important;
+        transition: none !important;
+        filter: none !important;
     }
 
     .slick-prev,
     .slick-next {
-        width: 30px;
-        height: 30px;
+        width: 30px !important;
+        height: 30px !important;
     }
 
     .slick-prev {
-    left: 25px;
-    
+        left: 10px;
     }
 
     .slick-next {
-    right: 25px;
-    
+        right: 10px;
     }
 
-    /* Ajustes para visualização única */
     .carousel-container .slick-slider {
-        padding: 0 1rem;
+        padding: 0;
     }
 
     .slick-list {
         margin: 0 !important;
-    }
-
-    /* Remove qualquer padding extra */
-    .slick-slide {
-        padding: 0;
     }
 }
